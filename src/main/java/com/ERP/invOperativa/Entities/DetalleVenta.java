@@ -32,5 +32,12 @@ public class DetalleVenta extends Base {
     private Venta venta;
 
 
+    public void setCantidad(int cantidad) {
+        if (cantidad >= 0) {
+            this.cantidad = cantidad;
+        }
+    }
+
+
 
 }

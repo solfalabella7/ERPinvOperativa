@@ -6,10 +6,8 @@ import lombok.*;
 import org.antlr.v4.runtime.misc.NotNull;
 import lombok.Builder;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -20,11 +18,10 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Articulo extends Base{
+public class Articulo extends Base {
 
     @Column(name = "NombreArticulo")
     private String NombreArticulo;
-
 
 
     @Column(name = "Stock")
@@ -50,8 +47,7 @@ public class Articulo extends Base{
     private Integer cantidadPreparacion;
 
 
-
-    @OneToMany(mappedBy = "articulo",cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "articulo", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     @Builder.Default
     @JsonIgnore
     private List<ArticuloProveedor> articuloProveedores = new ArrayList<>();
@@ -74,12 +70,12 @@ public class Articulo extends Base{
     }
 
     @ManyToOne
-    @JoinColumn(name="FamiliaArticulo")
+    @JoinColumn(name = "FamiliaArticulo")
     private FamiliaArticulo familiaArticulo;
 
     @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     @JoinColumn(name = "Prediccion")
 
-    private Prediccion prediccion=null;
+    private Prediccion prediccion = null;
 
 }

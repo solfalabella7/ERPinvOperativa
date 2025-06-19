@@ -46,5 +46,14 @@ public class Proveedor extends Base{
     @Column(name = "Tiempo_Estimado_Entrega")
     @Temporal(TemporalType.TIMESTAMP)
     private Date TiempoEstimadoEntrega;
+
+    public void setNombre(String nombre) {
+        this.nombreProveedor = nombre;
+    }
+
+    public String getNombre() {
+        return nombreProveedor;
+    }
+
 }
 

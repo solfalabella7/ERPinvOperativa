@@ -67,5 +67,16 @@ public class ArticuloProveedor extends Base{
         return this.precioArticuloProveedor * 0.20;
     }
 
+    //para el test 7:
+    private Long id;
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+
+    public Articulo getArticulo() { return articulo; }
+    public void setArticulo(Articulo articulo) { this.articulo = articulo; }
+
+    public Proveedor getProveedor() { return proveedor; }
+    public void setProveedor(Proveedor proveedor) { this.proveedor = proveedor; }
+
 
 }
