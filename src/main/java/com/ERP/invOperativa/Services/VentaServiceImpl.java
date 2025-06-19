@@ -174,5 +174,14 @@ public class VentaServiceImpl extends BaseServiceImpl<Venta, Long> implements Ve
         }
 
     }
+    public void setArticuloRepository(ArticuloRepository articuloRepository) {
+        this.articuloRepository = articuloRepository;
+    }
+
+    public void setDetalleVentaRepository(DetalleVentaRepository detalleVentaRepository) {
+        this.detalleVentaRepository = detalleVentaRepository;
+    }
+
+
 
 }

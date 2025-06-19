@@ -40,6 +40,8 @@ dependencies {
 
 	//para los test:
 	testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+	testImplementation 'org.mockito:mockito-junit-jupiter:5.10.0'
+
 
 
 }
