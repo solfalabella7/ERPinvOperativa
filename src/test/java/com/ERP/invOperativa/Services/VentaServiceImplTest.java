@@ -44,7 +44,8 @@ public class VentaServiceImplTest {
         ventaService.setArticuloRepository(articuloRepository);
         ventaService.setDetalleVentaRepository(detalleVentaRepository);
     }
-//VentaService: verificar que registrarVenta() disminuya el stock del artículo vendido.
+
+    //8. VentaService: verificar que registrarVenta() disminuya el stock del artículo vendido.
     @Test
     public void testCrearVentaDisminuyeStock() throws Exception {
         // Arrange
@@ -72,7 +73,8 @@ public class VentaServiceImplTest {
         assertEquals(stockInicial - cantidadVendida, articulo.getStock());
         verify(articuloRepository, times(1)).save(articulo);
     }
-   // VentaService: testear que obtenerVentas() devuelva una lista no vacía si hay ventas cargadas.
+
+   // 11. VentaService: testear que obtenerVentas() devuelva una lista no vacía si hay ventas cargadas.
    @Test
    public void testObtenerVentasDevuelveListaNoVacia() {
        // Arrange
