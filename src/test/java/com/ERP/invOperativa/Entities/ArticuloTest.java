@@ -7,7 +7,8 @@ import java.util.Date;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ArticuloTest {
-    // Verificar que la función addArticuloProveedor de la clase Articulo funcione correctamente.
+
+    // 9. Verificar que la función addArticuloProveedor de la clase Articulo funcione correctamente.
     @Test
     public void testAddArticuloProveedor() {
         // Arrange
@@ -30,7 +31,8 @@ public class ArticuloTest {
         assertTrue(articulo.getArticuloProveedores().contains(proveedor), "El proveedor no está en la lista.");
         assertEquals(articulo, proveedor.getArticulo(), "El proveedor no tiene el artículo asignado.");
     }
-// Verificar que la función addOrdenCompra de la clase Articulo funcione correctamente.
+
+    // 10. Verificar que la función addOrdenCompra de la clase Articulo funcione correctamente.
     @Test
     public void testAddOrdenCompra() {
         // Arrange
@@ -53,7 +55,7 @@ public class ArticuloTest {
         assertEquals(articulo, ordenCompra.getArticulo(), "La orden no tiene el artículo asignado.");
     }
 
-    // Verificar que al crear un artículo y setear todos sus atributos, se guarden correctamente.
+    // 14. Verificar que al crear un artículo y setear todos sus atributos, se guarden correctamente.
     @Test
     public void testCrearArticuloConTodosLosAtributos() {
         // Arrange
@@ -86,7 +88,5 @@ public class ArticuloTest {
         assertNotNull(articulo.getOrdenesCompra());
         assertTrue(articulo.getOrdenesCompra().isEmpty());
     }
-
-
 
 }

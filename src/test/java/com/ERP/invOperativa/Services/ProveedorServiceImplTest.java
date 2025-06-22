@@ -30,7 +30,8 @@ public class ProveedorServiceImplTest {
     public void setUp() {
         proveedorService = new ProveedorServiceImpl(baseRepository, proveedorRepository);
     }
-//verificar que listarProveedor() devuelve todos los proveedores existentes.
+
+    // 12. Verificar que listarProveedor() devuelve todos los proveedores existentes.
     @Test
     public void testListarProveedorDevuelveTodosLosProveedores() {
         // Arrange
